@@ -82,6 +82,7 @@ header{
 }
 label{
     margin-left: 5px;
+    text-align: center;
 }
 .produto img{
     width: 100%;
