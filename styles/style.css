@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+@keyframes scale {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.2;
+    }
+    100%{
+        scale: 1;
+    }
+    
 }
 body{
     background-color: rgb(240, 240, 240);
@@ -11,12 +25,47 @@ body{
 
 header{
     background-color: #13678A;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+}
+.container-header{
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    width: 170px;
+}
+.logo img{
+    width: 100%;
 }
 .center{
     max-width: 900px;
     margin: 0 auto;
 }
-
+.container-titulo-principal{
+    width: 100%;
+    padding: 50px 30px;
+    background-image: url(../image/cool-background\ \(1\).png);
+}
+.box-title{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.box-title h1{
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.box-title img{
+    height: 90px;
+}
+.box-title img{
+    animation-name: scale;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+}
 .container-produtos-secundario{
     margin-top: 50px;
     display: grid;
@@ -56,6 +105,12 @@ label{
     .container-produtos-secundario{
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .box-title h1{
+        font-size: 30px;
+    }
+    .container-titulo-principal{
+        padding: 50px 30px;
+    }
 }
 
 @media (max-width:720px){
@@ -65,6 +120,9 @@ label{
     .container-produtos-secundario{
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .box-title h1{
+        font-size: 25px;
+    }
 }
 
 @media (max-width:600px){
@@ -73,15 +131,20 @@ label{
     }
     .container-produtos-secundario{
         grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .box-title img{
+        height: 70px;
     }
 }
 
 @media (max-width:500px){
-    .center{
-        width: 95%;
-    }
     .container-produtos-secundario{
         grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .center{
+        width: 98%;
     }
 }
 
