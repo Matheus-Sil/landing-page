@@ -147,9 +147,12 @@ label{
     .box-title img{
         height: 70px;
     }
+    .produto img{
+        width: 100%;
+    }
 }
 
-/* @media (max-width:500px){
+@media (max-width:500px){
     .container-produtos-secundario{
         grid-template-columns: 1fr 1fr;
         gap: 10px;
@@ -157,7 +160,7 @@ label{
     .center{
         width: 98%;
     }
-} */
+}
 
 @media (max-width:350px){
     .center{
