@@ -72,21 +72,28 @@ header{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 40px;
 }
-
+.container-produtos-principal{
+    margin-bottom: 80px;
+}
 .produto{
     display: flex;
     flex-direction: column;
     gap: 10px;
     background-color: #fff;
-    padding-bottom: 20px;
+}
+.informacoes{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    position: relative;
 }
 label{
-    margin-left: 5px;
     text-align: center;
-    padding: 0 10px;
+    font-size: 1em;
 }
 .produto img{
-    width: 100%;
+    width: 195px;
+    height: 195px;
 }
 .saiba-mais{
     padding: 8px 0;
@@ -96,8 +103,10 @@ label{
     text-align: center;
     text-decoration: none;
     background-color:#13678A ;
-    align-self: center;
-    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    left:10px;
+    margin-bottom: 20px;
 }
 
 @media (max-width:900px){
@@ -140,7 +149,7 @@ label{
     }
 }
 
-@media (max-width:500px){
+/* @media (max-width:500px){
     .container-produtos-secundario{
         grid-template-columns: 1fr 1fr;
         gap: 10px;
@@ -148,7 +157,7 @@ label{
     .center{
         width: 98%;
     }
-}
+} */
 
 @media (max-width:350px){
     .center{
@@ -157,4 +166,5 @@ label{
     .container-produtos-secundario{
         grid-template-columns: 1fr;
     }
+
 }
